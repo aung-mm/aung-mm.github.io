@@ -90,10 +90,10 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
-          title: 'Content',
+          title: 'Navigate',
           items: [
             {
               label: 'Blog',
@@ -107,14 +107,10 @@ const config: Config = {
               label: 'Contributions',
               to: '/contributions',
             },
-            {
-              label: 'Hobbies',
-              to: '/hobbies',
-            },
           ],
         },
         {
-          title: 'Professional',
+          title: 'Connect',
           items: [
             {
               label: 'LinkedIn',
@@ -126,21 +122,8 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: 'Security',
-          items: [
-            {
-              label: 'Security Engineering',
-              to: '/blog',
-            },
-            {
-              label: 'Defense Operations',
-              to: '/blog',
-            },
-          ],
-        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Aung Myint Myat. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Aung Myint Myat`,
     },
     prism: {
       theme: prismThemes.github,

@@ -1,70 +1,189 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Modern minimalist theme inspired by clean tech portfolios
+ * Focus on readability, spacing, and subtle interactions
  */
 
-/* Material Design + Cybersecurity Professional Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Light theme - Clean and minimal */
 :root {
-  /* Material Blue-Grey palette for professional cybersecurity look */
-  --ifm-color-primary: #1976d2;
-  --ifm-color-primary-dark: #1565c0;
-  --ifm-color-primary-darker: #0d47a1;
-  --ifm-color-primary-darkest: #0a3d91;
-  --ifm-color-primary-light: #1e88e5;
-  --ifm-color-primary-lighter: #42a5f5;
-  --ifm-color-primary-lightest: #64b5f6;
+  /* Modern blue accent - subtle and professional */
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
 
-  /* Monospace fonts for professional/technical feel */
-  --ifm-font-family-base: 'JetBrains Mono', 'Fira Code', 'Roboto Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
-  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Consolas', monospace;
+  /* Modern typography - Inter for UI, Roboto for content */
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  --ifm-heading-font-family: 'Inter', sans-serif;
 
-  /* Material shadows and spacing */
-  --ifm-code-font-size: 95%;
-  --ifm-global-radius: 4px;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Refined spacing and sizing */
+  --ifm-code-font-size: 90%;
+  --ifm-global-radius: 8px;
+  --ifm-line-height-base: 1.7;
+  --ifm-heading-line-height: 1.3;
 
-  /* Professional colors */
-  --ifm-background-color: #fafafa;
-  --ifm-navbar-background-color: #ffffff;
+  /* Clean background colors */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8fafc;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.95);
+  --ifm-footer-background-color: #f8fafc;
+
+  /* Subtle text colors */
+  --ifm-font-color-base: #1e293b;
+  --ifm-color-emphasis-300: #cbd5e1;
+  --ifm-color-emphasis-600: #64748b;
+  --ifm-color-emphasis-700: #475569;
+  --ifm-color-emphasis-800: #334155;
+
+  /* Refined shadows */
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-tl: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.1);
 }
 
-/* Dark mode - Material Dark Theme with cybersecurity aesthetics */
+/* Dark mode - Pure black background */
 [data-theme='dark'] {
-  --ifm-color-primary: #64b5f6;
-  --ifm-color-primary-dark: #42a5f5;
-  --ifm-color-primary-darker: #2196f3;
-  --ifm-color-primary-darkest: #1e88e5;
-  --ifm-color-primary-light: #90caf9;
-  --ifm-color-primary-lighter: #bbdefb;
-  --ifm-color-primary-lightest: #e3f2fd;
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
 
-  --docusaurus-highlighted-code-line-bg: rgba(100, 181, 246, 0.15);
-  --ifm-background-color: #121212;
-  --ifm-navbar-background-color: #1e1e1e;
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #0a0a0a;
+  --ifm-navbar-background-color: rgba(0, 0, 0, 0.95);
+  --ifm-footer-background-color: #0a0a0a;
+
+  --ifm-font-color-base: #e2e8f0;
+  --ifm-color-emphasis-300: #333333;
+  --ifm-color-emphasis-600: #94a3b8;
+  --ifm-color-emphasis-700: #cbd5e1;
+  --ifm-color-emphasis-800: #e2e8f0;
+
+  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.15);
 }
 
-/* Material design card styling */
+/* Modern card styling with subtle elevation */
 .card {
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: translateY(-2px);
 }
 
-/* Clean, minimal navbar */
+/* Clean navbar with backdrop blur */
 .navbar {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  box-shadow: none;
 }
 
-/* Professional button styling */
+.navbar__item {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Minimal button styling */
 .button {
-  border-radius: 4px;
+  border-radius: 6px;
   font-family: var(--ifm-font-family-base);
   font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.button--primary {
+  background: var(--ifm-color-primary);
+}
+
+.button--outline {
+  border: 1.5px solid var(--ifm-color-primary);
+}
+
+/* Typography refinements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Better link styling */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Footer styling */
+.footer {
+  background: var(--ifm-footer-background-color);
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  padding: 2rem 0;
+}
+
+.footer__title {
+  font-size: 0.875rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Container max width for better readability */
+.container {
+  max-width: 1200px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Code blocks */
+code {
+  border-radius: 4px;
+  padding: 0.15rem 0.3rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
 }

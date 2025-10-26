@@ -1,0 +1,24 @@
+security:
+  label: Security
+  description: Security engineering and defensive operations
+  permalink: /security
+
+engineering:
+  label: Engineering
+  description: Security engineering practices and implementations
+  permalink: /engineering
+
+defense:
+  label: Defense Operations
+  description: Defensive security operations and strategies
+  permalink: /defense
+
+automation:
+  label: Automation
+  description: Security automation and process optimization
+  permalink: /automation
+
+technical:
+  label: Technical
+  description: Technical deep dives and analysis
+  permalink: /technical

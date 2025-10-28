@@ -70,7 +70,11 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Aung MM',
+      title: 'Aung Myint Myat',
+      logo: {
+        alt: 'Aung Myint Myat Logo',
+        src: 'img/logo.svg',
+      },
       hideOnScroll: false,
       items: [
         {to: '/blog', label: 'Blog', position: 'left'},

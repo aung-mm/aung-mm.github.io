@@ -14,17 +14,54 @@ interface Contribution {
 }
 
 const contributions: Contribution[] = [
-  // Add your contributions here
-  // Example:
-  // {
-  //   title: 'Building Secure CI/CD Pipelines',
-  //   type: 'Talk',
-  //   event: 'Security Conference 2024',
-  //   date: '2024-06-15',
-  //   description: 'A deep dive into securing CI/CD pipelines with automation and best practices.',
-  //   link: 'https://example.com',
-  //   slides: 'https://slides.example.com',
-  // },
+  {
+    title: 'Investigating Lumma Stealer Malware',
+    type: 'Presentation',
+    event: 'BSides Myanmar 2024',
+    date: '2024-11-01',
+    description: 'Deep dive analysis of Lumma Stealer malware, covering its infection vectors, persistence mechanisms, and detection strategies.',
+    slides: '/slides/lumma-stealer-bsides-2024.pdf',
+  },
+  {
+    title: 'Applied Machine Learning in Cyber Security',
+    type: 'Talk',
+    event: 'BSides Myanmar 2023',
+    date: '2023-11-01',
+    description: 'Explored practical applications of machine learning in cybersecurity operations, including threat detection, anomaly detection, and automated response systems.',
+    slides: '/slides/ml-cybersecurity-bsides-2023.pdf',
+  },
+  {
+    title: "What's in the SOC",
+    type: 'Talk',
+    event: 'Cybergon',
+    date: '2022-09-01',
+    description: 'Discussed SOC components, job roles, and how to utilize open-source security frameworks to build effective security operations capabilities.',
+    slides: '/slides/whats-in-soc-cybergon-2022.pdf',
+  },
+  {
+    title: 'Building an Open-Source SOC Platform',
+    type: 'Presentation',
+    event: 'BSides Myanmar 2020',
+    date: '2020-11-01',
+    description: 'Demonstrated how to leverage open-source solutions and frameworks to build and run a complete Security Operations Center platform.',
+    slides: '/slides/opensource-soc-bsides-2020.pdf',
+  },
+  {
+    title: 'AWS Cloud Security and Threat Detection',
+    type: 'Workshop',
+    event: 'AWS User Group Myanmar',
+    date: '2020-05-01',
+    description: 'Discussed AWS security features and best practices. Demonstrated detection of malicious activities on AWS based on the Capital One data breach case study.',
+    slides: '/slides/aws-security-awsug-2020.pdf',
+  },
+  {
+    title: 'IT Security Fundamentals and Awareness Training',
+    type: 'Workshop',
+    event: 'Central Bank of Myanmar',
+    date: '2019-09-01',
+    description: 'Conducted comprehensive IT security fundamentals and awareness training for staff members at the Central Bank of Myanmar.',
+    slides: '/slides/security-awareness-cbm-2019.pdf',
+  },
 ];
 
 function ContributionCard({ contribution }: { contribution: Contribution }) {

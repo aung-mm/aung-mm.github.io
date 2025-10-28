@@ -16,15 +16,27 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
-  // Add your work experiences here
   {
-    title: 'Security Engineer',
-    company: 'Company Name',
-    period: '2022 - Present',
-    description: 'Leading security engineering initiatives and implementing defense operations.',
-    technologies: ['Python', 'Security Tools', 'Cloud Security'],
+    title: 'Security Operations Center (SOC) Analyst II',
+    company: 'ExpressVPN',
+    period: 'Feb 2024 - Present',
+    description: 'Performs proactive security monitoring and threat hunting across organizational infrastructure. Develops and optimizes detection rules and monitoring logic. Conducts security architecture reviews and collaborates with engineering teams to assess security vulnerabilities.',
+    technologies: ['Threat Hunting', 'SIEM', 'Detection Engineering', 'Security Architecture', 'Vulnerability Management', 'Automation'],
   },
-  // Add more experiences
+  {
+    title: 'Cyber Security Officer',
+    company: 'Sysnet System and Solutions Pte. Ltd',
+    period: 'Oct 2022 - Feb 2024',
+    description: 'Implemented security solutions for enterprise companies including SIEM, Vulnerability Management, and Endpoint Security. Coordinated security assessment projects and conducted internal security audits for compliance. Led projects from start to close while maintaining client relationships.',
+    technologies: ['SIEM', 'Vulnerability Management', 'Security Audits', 'Project Management', 'Network Hardening'],
+  },
+  {
+    title: 'Cyber Security Engineer',
+    company: 'Kernellix Co. Ltd',
+    period: 'Jun 2019 - Sep 2022',
+    description: 'Designed and maintained secure cloud and on-premises infrastructure. Developed and deployed SOC solutions tailored to enterprise needs. Executed digital forensics and incident response operations. Built scalable, secure cloud architectures on AWS, GCP, and Azure.',
+    technologies: ['Cloud Security', 'SOC Development', 'DFIR', 'Kubernetes', 'CI/CD', 'Infrastructure as Code', 'AWS', 'Azure', 'GCP'],
+  },
 ];
 
 // Certificates Data
@@ -36,12 +48,40 @@ interface Certificate {
 }
 
 const certificates: Certificate[] = [
-  // Add your certificates here
   {
-    name: 'CISSP',
-    issuer: 'ISC2',
-    date: '2023',
-    link: 'https://...',
+    name: 'Certified Information Systems Security Professional (CISSP)',
+    issuer: '(ISC)²',
+    date: 'May 2022',
+  },
+  {
+    name: 'Certified Threat Hunting Professional (eCTHPv2)',
+    issuer: 'INE',
+    date: 'May 2025',
+  },
+  {
+    name: 'HashiCorp Certified: Terraform Associate',
+    issuer: 'HashiCorp',
+    date: 'Apr 2023',
+  },
+  {
+    name: 'Foundation Level Threat Intelligence Analyst',
+    issuer: 'arcX',
+    date: 'Mar 2023',
+  },
+  {
+    name: 'AWS Certified Security - Specialty',
+    issuer: 'AWS',
+    date: 'Dec 2021',
+  },
+  {
+    name: 'AWS Certified Solution Architect - Associate',
+    issuer: 'AWS',
+    date: 'Sep 2019',
+  },
+  {
+    name: 'FireEye Partner Sales Engineer Certification for Helix Cloud Security (FSE)',
+    issuer: 'FireEye',
+    date: 'Sep 2021',
   },
 ];
 
@@ -58,8 +98,9 @@ function HomepageHeader() {
               Cybersecurity Professional
             </p>
             <p className={styles.heroDescription}>
-              Specializing in Security Engineering, Defense Operations, and streamlining
-              cybersecurity processes to be more efficient and secure.
+              With a strong desire to be excellent in information security, I invest my knowledge
+              and expertise as an information security professional. Specializing in Security Operations,
+              Threat Hunting, Cloud Security, DevSecOps, and Automation with multiple years of industry experience.
             </p>
             <div className={styles.heroButtons}>
               <Link
@@ -77,7 +118,7 @@ function HomepageHeader() {
           <div className={styles.heroImage}>
             <div className={styles.avatarPlaceholder}>
               <img
-                src="https://github.com/aung-mm.png"
+                src="/img/profile.jpg"
                 alt="Aung Myint Myat"
                 className={styles.avatar}
               />

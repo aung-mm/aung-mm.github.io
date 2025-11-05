@@ -187,3 +187,11 @@ code {
   background: var(--ifm-background-surface-color);
   border: 1px solid var(--ifm-color-emphasis-300);
 }
+
+/* Ensure main content is visible */
+main {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  min-height: 50vh;
+}

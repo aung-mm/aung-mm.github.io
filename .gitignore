@@ -18,3 +18,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Personal files
+resume.pdf
+profile.jpg
+myinfo.txt

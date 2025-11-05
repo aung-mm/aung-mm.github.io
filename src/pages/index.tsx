@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import ParticleBackground from '../components/ParticleBackground';
 
 import styles from './index.module.css';
 
@@ -20,21 +21,21 @@ const experiences: Experience[] = [
     title: 'Security Operations Center (SOC) Analyst II',
     company: 'ExpressVPN',
     period: 'Feb 2024 - Present',
-    description: 'Performs proactive security monitoring and threat hunting across organizational infrastructure. Develops and optimizes detection rules and monitoring logic. Conducts security architecture reviews and collaborates with engineering teams to assess security vulnerabilities.',
+    description: 'I hunt threats across global infrastructure and build detection systems that actually catch attackers. I created automated workflows to streamline the detection logic deployments and vulnerability management. I do security architecture reviews for engineering teams to ship secure products. When incidents happen, I investigate, contain, and eradicate the threats.',
     technologies: ['Threat Hunting', 'SIEM', 'Detection Engineering', 'Security Architecture', 'Vulnerability Management', 'Automation'],
   },
   {
     title: 'Cyber Security Officer',
     company: 'Sysnet System and Solutions Pte. Ltd',
     period: 'Oct 2022 - Feb 2024',
-    description: 'Implemented security solutions for enterprise companies including SIEM, Vulnerability Management, and Endpoint Security. Coordinated security assessment projects and conducted internal security audits for compliance. Led projects from start to close while maintaining client relationships.',
+    description: 'I deployed enterprise security solutions—SIEM platforms, vulnerability scanners, and endpoint protection—that gave companies real visibility into their threats. I ran security assessments and compliance audits that helped clients meet regulatory requirements. I managed projects end-to-end and worked directly with customers to solve their security challenges.',
     technologies: ['SIEM', 'Vulnerability Management', 'Security Audits', 'Project Management', 'Network Hardening'],
   },
   {
     title: 'Cyber Security Engineer',
     company: 'Kernellix Co. Ltd',
     period: 'Jun 2019 - Sep 2022',
-    description: 'Designed and maintained secure cloud and on-premises infrastructure. Developed and deployed SOC solutions tailored to enterprise needs. Executed digital forensics and incident response operations. Built scalable, secure cloud architectures on AWS, GCP, and Azure.',
+    description: 'I built SOC platforms from scratch and architected secure cloud infrastructure across AWS, GCP, and Azure. When breaches happened, I ran forensics investigations and incident response operations to contain the damage. I automated deployments with CI/CD pipelines and orchestrated containerized applications on Kubernetes. I designed security that scaled with the business.',
     technologies: ['Cloud Security', 'SOC Development', 'DFIR', 'Kubernetes', 'CI/CD', 'Infrastructure as Code', 'AWS', 'Azure', 'GCP'],
   },
 ];
@@ -52,42 +53,50 @@ const certificates: Certificate[] = [
     name: 'Certified Information Systems Security Professional (CISSP)',
     issuer: '(ISC)²',
     date: 'May 2022',
+    link: 'https://www.credly.com/badges/your-cissp-badge',
   },
   {
     name: 'Certified Threat Hunting Professional (eCTHPv2)',
     issuer: 'INE',
     date: 'May 2025',
+    link: 'https://www.credly.com/badges/your-ecthp-badge',
   },
   {
     name: 'HashiCorp Certified: Terraform Associate',
     issuer: 'HashiCorp',
     date: 'Apr 2023',
+    link: 'https://www.credly.com/badges/your-terraform-badge',
   },
   {
     name: 'Foundation Level Threat Intelligence Analyst',
     issuer: 'arcX',
     date: 'Mar 2023',
+    link: 'https://www.credly.com/badges/your-arcx-badge',
   },
   {
     name: 'AWS Certified Security - Specialty',
     issuer: 'AWS',
     date: 'Dec 2021',
+    link: 'https://www.credly.com/badges/your-aws-security-badge',
   },
   {
     name: 'AWS Certified Solution Architect - Associate',
     issuer: 'AWS',
     date: 'Sep 2019',
+    link: 'https://www.credly.com/badges/your-aws-saa-badge',
   },
   {
     name: 'FireEye Partner Sales Engineer Certification for Helix Cloud Security (FSE)',
     issuer: 'FireEye',
     date: 'Sep 2021',
+    link: 'https://www.credly.com/badges/your-fireeye-badge',
   },
 ];
 
 function HomepageHeader() {
   return (
     <header className={styles.hero}>
+      <ParticleBackground />
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
@@ -98,9 +107,8 @@ function HomepageHeader() {
               Cybersecurity Professional
             </p>
             <p className={styles.heroDescription}>
-              With a strong desire to be excellent in information security, I invest my knowledge
-              and expertise as an information security professional. Specializing in Security Operations,
-              Threat Hunting, Cloud Security, DevSecOps, and Automation with multiple years of industry experience.
+              <div>I simply just do cybersecurity. I spend most of my time building security tools and hunting adversaries. From threat hunting, incident response, creating tools that can defense against security threats, and AUTOMATION, I do all the cool stuffs.</div>
+              My goal is to create things that are acutally useful and efficient when dealing with security threats. 
             </p>
             <div className={styles.heroButtons}>
               <Link

@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Aung Myint Myat',
   tagline: 'Cybersecurity Professional | Security Engineering | Defense Operations',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/detective.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -67,13 +67,15 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Aung Myint Myat',
       logo: {
         alt: 'Aung Myint Myat Logo',
-        src: 'img/logo.svg',
+        src: 'img/detective.svg',
       },
       hideOnScroll: false,
       items: [

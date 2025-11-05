@@ -12,12 +12,24 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'Example Security Tool',
-    description: 'A defensive security tool for automated threat detection and response.',
-    tags: ['Security', 'Automation', 'Python'],
-    github: 'https://github.com/aung-mm/example-project',
+    title: 'Personal Cybersecurity Website',
+    description: 'A professional portfolio website built with Docusaurus showcasing my cybersecurity experience, contributions, and projects. Features modern design with responsive layout and custom security-themed branding.',
+    tags: ['Docusaurus', 'React', 'TypeScript', 'Web Development'],
+    github: 'https://github.com/aung-mm/aung-mm.github.io',
+    link: 'https://aungmmtech.info',
   },
-  // Add your projects here
+  {
+    title: 'OverTheWire CTF Solutions',
+    description: 'Collection of solutions and write-ups for OverTheWire wargames. Documents approaches to common security challenges including privilege escalation, cryptography, and web exploitation.',
+    tags: ['CTF', 'Security', 'Linux', 'Learning'],
+    github: 'https://github.com/aung-mm/overthewire',
+  },
+  {
+    title: 'Early Programming Projects',
+    description: 'A collection of my early programming experiments and scripts. Includes various automation tools and practice projects developed while learning system administration and scripting.',
+    tags: ['Python', 'Automation', 'Scripts', 'Learning'],
+    github: 'https://github.com/aung-mm/my-programs',
+  },
 ];
 
 function ProjectCard({ project }: { project: Project }) {

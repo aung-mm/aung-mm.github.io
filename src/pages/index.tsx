@@ -107,7 +107,7 @@ function HomepageHeader() {
               Cybersecurity Professional
             </p>
             <p className={styles.heroDescription}>
-              <div>I simply just do cybersecurity. I spend most of my time building security tools and hunting adversaries. From threat hunting, incident response, creating tools that can defense against security threats, and AUTOMATION, I do all the cool stuffs.</div>
+              <div>I simply just do cybersecurity. I spend most of my time building security tools and hunting adversaries. From threat hunting, incident response, creating tools that can defend against security threats, and AUTOMATION, I do all the cool stuffs.</div>
               My goal is to create things that are acutally useful and efficient when dealing with security threats. 
             </p>
             <div className={styles.heroButtons}>

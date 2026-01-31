@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import ParticleBackground from '../components/ParticleBackground';
 
 import styles from './index.module.css';
 
@@ -101,6 +102,7 @@ const certificates: Certificate[] = [
 function HomepageHeader() {
   return (
     <header className={styles.hero}>
+      <ParticleBackground />
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroText}>

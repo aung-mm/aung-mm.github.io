@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import ParticleBackground from '../components/ParticleBackground';
 
 interface Contribution {
   title: string;
@@ -125,7 +126,8 @@ export default function Contributions(): JSX.Element {
       title="Contributions"
       description="Talks, presentations, and conference contributions"
     >
-      <main style={{ padding: '2rem' }}>
+      <ParticleBackground />
+      <main style={{ padding: '2rem', position: 'relative', zIndex: 1 }}>
         <div className="container">
           <h1>Contributions</h1>
           <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>

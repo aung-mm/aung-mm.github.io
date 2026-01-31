@@ -114,14 +114,25 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
           </Link>
         )}
         {contribution.slides && (
-          <a
-            className="button button--secondary button--sm"
-            href={contribution.slides}
-            download
-            style={{ marginRight: '0.5rem', marginBottom: '0.5rem' }}
-          >
-            Slides
-          </a>
+          <>
+            <a
+              className="button button--secondary button--sm"
+              href={contribution.slides}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginRight: '0.5rem', marginBottom: '0.5rem' }}
+            >
+              Preview
+            </a>
+            <a
+              className="button button--outline button--sm"
+              href={contribution.slides}
+              download
+              style={{ marginRight: '0.5rem', marginBottom: '0.5rem' }}
+            >
+              Download
+            </a>
+          </>
         )}
         {contribution.video && (
           <Link

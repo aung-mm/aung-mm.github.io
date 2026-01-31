@@ -21,7 +21,7 @@ const contributions: Contribution[] = [
     event: 'BSides Myanmar 2025',
     date: '2025-01-15',
     description: 'Comprehensive guide to macOS incident response, covering forensic techniques, artifact collection, and investigation methodologies specific to macOS environments.',
-    slides: '/slides/macos-ir-bsides-2025.pptx',
+    slides: 'https://docs.google.com/presentation/d/YOUR_FILE_ID/edit?usp=sharing', // Replace with actual Google Slides link
   },
   {
     title: 'Not So Boring SOC',
@@ -29,7 +29,7 @@ const contributions: Contribution[] = [
     event: 'Barcamp Myanmar 2025',
     date: '2025-01-10',
     description: 'Making Security Operations Centers more engaging and effective through automation, gamification, and modern operational practices.',
-    slides: '/slides/not-so-boring-soc-barcamp-2025.pptx',
+    slides: 'https://docs.google.com/presentation/d/YOUR_FILE_ID/edit?usp=sharing', // Replace with actual Google Slides link
   },
   {
     title: 'Advanced Threat Detection Techniques',
@@ -37,7 +37,7 @@ const contributions: Contribution[] = [
     event: 'NDSS 2025',
     date: '2025-01-05',
     description: 'Presentation on advanced threat detection methodologies and their practical implementation in enterprise security operations.',
-    slides: '/slides/ndss-2025-presentation.pptx',
+    slides: 'https://docs.google.com/presentation/d/YOUR_FILE_ID/edit?usp=sharing', // Replace with actual Google Slides link
   },
   {
     title: 'Investigating Lumma Stealer Malware',
@@ -45,7 +45,7 @@ const contributions: Contribution[] = [
     event: 'BSides Myanmar 2024',
     date: '2024-11-01',
     description: 'Deep dive analysis of Lumma Stealer malware, covering its infection vectors, persistence mechanisms, and detection strategies.',
-    slides: '/slides/lumma-stealer-bsides-2024.pptx',
+    slides: 'https://docs.google.com/presentation/d/YOUR_FILE_ID/edit?usp=sharing', // Replace with actual Google Slides link
   },
   {
     title: 'Applied Machine Learning in Cyber Security',
@@ -53,7 +53,7 @@ const contributions: Contribution[] = [
     event: 'BSides Myanmar 2023',
     date: '2023-11-01',
     description: 'Explored practical applications of machine learning in cybersecurity operations, including threat detection, anomaly detection, and automated response systems.',
-    slides: '/slides/ml-cybersecurity-bsides-2023.pptx',
+    slides: 'https://docs.google.com/presentation/d/YOUR_FILE_ID/edit?usp=sharing', // Replace with actual Google Slides link
   },
   {
     title: "What's in the SOC",
@@ -61,7 +61,7 @@ const contributions: Contribution[] = [
     event: 'Cybergon',
     date: '2022-09-01',
     description: 'Discussed SOC components, job roles, and how to utilize open-source security frameworks to build effective security operations capabilities.',
-    slides: '/slides/whats-in-soc-cybergon-2022.pptx',
+    slides: 'https://docs.google.com/presentation/d/YOUR_FILE_ID/edit?usp=sharing', // Replace with actual Google Slides link
   },
   {
     title: 'Building an Open-Source SOC Platform',
@@ -69,7 +69,7 @@ const contributions: Contribution[] = [
     event: 'BSides Myanmar 2020',
     date: '2020-11-01',
     description: 'Demonstrated how to leverage open-source solutions and frameworks to build and run a complete Security Operations Center platform.',
-    slides: '/slides/opensource-soc-bsides-2020.pptx',
+    slides: 'https://docs.google.com/presentation/d/YOUR_FILE_ID/edit?usp=sharing', // Replace with actual Google Slides link
   },
   {
     title: 'AWS Cloud Security and Threat Detection',
@@ -77,7 +77,7 @@ const contributions: Contribution[] = [
     event: 'AWS User Group Myanmar',
     date: '2020-05-01',
     description: 'Discussed AWS security features and best practices. Demonstrated detection of malicious activities on AWS based on the Capital One data breach case study.',
-    slides: '/slides/aws-security-awsug-2020.pptx',
+    slides: 'https://docs.google.com/presentation/d/YOUR_FILE_ID/edit?usp=sharing', // Replace with actual Google Slides link
   },
 ];
 
@@ -114,25 +114,15 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
           </Link>
         )}
         {contribution.slides && (
-          <>
-            <a
-              className="button button--secondary button--sm"
-              href={contribution.slides}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ marginRight: '0.5rem', marginBottom: '0.5rem' }}
-            >
-              Preview
-            </a>
-            <a
-              className="button button--outline button--sm"
-              href={contribution.slides}
-              download
-              style={{ marginRight: '0.5rem', marginBottom: '0.5rem' }}
-            >
-              Download
-            </a>
-          </>
+          <a
+            className="button button--secondary button--sm"
+            href={contribution.slides}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginRight: '0.5rem', marginBottom: '0.5rem' }}
+          >
+            View Slides
+          </a>
         )}
         {contribution.video && (
           <Link

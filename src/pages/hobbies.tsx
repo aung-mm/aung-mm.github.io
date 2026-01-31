@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import ParticleBackground from '../components/ParticleBackground';
 
 interface HobbyItem {
   title: string;
@@ -63,7 +64,8 @@ export default function Hobbies(): JSX.Element {
       title="Hobbies"
       description="Personal interests, vlogs, notes, and articles"
     >
-      <main style={{ padding: '2rem' }}>
+      <ParticleBackground />
+      <main style={{ padding: '2rem', position: 'relative', zIndex: 1 }}>
         <div className="container">
           <h1>Hobbies & Interests</h1>
           <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>

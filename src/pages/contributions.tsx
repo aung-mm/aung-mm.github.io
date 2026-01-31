@@ -16,12 +16,36 @@ interface Contribution {
 
 const contributions: Contribution[] = [
   {
+    title: 'macOS Incident Response',
+    type: 'Presentation',
+    event: 'BSides Myanmar 2025',
+    date: '2025-01-15',
+    description: 'Comprehensive guide to macOS incident response, covering forensic techniques, artifact collection, and investigation methodologies specific to macOS environments.',
+    slides: '/slides/macos-ir-bsides-2025.pptx',
+  },
+  {
+    title: 'Not So Boring SOC',
+    type: 'Talk',
+    event: 'Barcamp Myanmar 2025',
+    date: '2025-01-10',
+    description: 'Making Security Operations Centers more engaging and effective through automation, gamification, and modern operational practices.',
+    slides: '/slides/not-so-boring-soc-barcamp-2025.pptx',
+  },
+  {
+    title: 'Advanced Threat Detection Techniques',
+    type: 'Presentation',
+    event: 'NDSS 2025',
+    date: '2025-01-05',
+    description: 'Presentation on advanced threat detection methodologies and their practical implementation in enterprise security operations.',
+    slides: '/slides/ndss-2025-presentation.pptx',
+  },
+  {
     title: 'Investigating Lumma Stealer Malware',
     type: 'Presentation',
     event: 'BSides Myanmar 2024',
     date: '2024-11-01',
     description: 'Deep dive analysis of Lumma Stealer malware, covering its infection vectors, persistence mechanisms, and detection strategies.',
-    slides: '/slides/lumma-stealer-bsides-2024.pdf',
+    slides: '/slides/lumma-stealer-bsides-2024.pptx',
   },
   {
     title: 'Applied Machine Learning in Cyber Security',
@@ -29,7 +53,7 @@ const contributions: Contribution[] = [
     event: 'BSides Myanmar 2023',
     date: '2023-11-01',
     description: 'Explored practical applications of machine learning in cybersecurity operations, including threat detection, anomaly detection, and automated response systems.',
-    slides: '/slides/ml-cybersecurity-bsides-2023.pdf',
+    slides: '/slides/ml-cybersecurity-bsides-2023.pptx',
   },
   {
     title: "What's in the SOC",
@@ -37,7 +61,7 @@ const contributions: Contribution[] = [
     event: 'Cybergon',
     date: '2022-09-01',
     description: 'Discussed SOC components, job roles, and how to utilize open-source security frameworks to build effective security operations capabilities.',
-    slides: '/slides/whats-in-soc-cybergon-2022.pdf',
+    slides: '/slides/whats-in-soc-cybergon-2022.pptx',
   },
   {
     title: 'Building an Open-Source SOC Platform',
@@ -45,7 +69,7 @@ const contributions: Contribution[] = [
     event: 'BSides Myanmar 2020',
     date: '2020-11-01',
     description: 'Demonstrated how to leverage open-source solutions and frameworks to build and run a complete Security Operations Center platform.',
-    slides: '/slides/opensource-soc-bsides-2020.pdf',
+    slides: '/slides/opensource-soc-bsides-2020.pptx',
   },
   {
     title: 'AWS Cloud Security and Threat Detection',
@@ -53,15 +77,7 @@ const contributions: Contribution[] = [
     event: 'AWS User Group Myanmar',
     date: '2020-05-01',
     description: 'Discussed AWS security features and best practices. Demonstrated detection of malicious activities on AWS based on the Capital One data breach case study.',
-    slides: '/slides/aws-security-awsug-2020.pdf',
-  },
-  {
-    title: 'IT Security Fundamentals and Awareness Training',
-    type: 'Workshop',
-    event: 'Central Bank of Myanmar',
-    date: '2019-09-01',
-    description: 'Conducted comprehensive IT security fundamentals and awareness training for staff members at the Central Bank of Myanmar.',
-    slides: '/slides/security-awareness-cbm-2019.pdf',
+    slides: '/slides/aws-security-awsug-2020.pptx',
   },
 ];
 

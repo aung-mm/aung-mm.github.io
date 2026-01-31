@@ -50,6 +50,12 @@ interface Certificate {
 
 const certificates: Certificate[] = [
   {
+    name: 'GIAC Enterprise Incident Responder (GEIR)',
+    issuer: 'SANS Institute',
+    date: 'Dec 2025',
+    link: 'https://www.credly.com/badges/9f633aa8-5a02-4f00-a0aa-ff181f3c440e',
+  },
+  {
     name: 'Certified Information Systems Security Professional (CISSP)',
     issuer: '(ISC)²',
     date: 'May 2022',
@@ -108,7 +114,7 @@ function HomepageHeader() {
             </p>
             <p className={styles.heroDescription}>
               <div>I simply just do cybersecurity. I spend most of my time building security tools and hunting adversaries. From threat hunting, incident response, creating tools that can defend against security threats, and AUTOMATION, I do all the cool stuffs.</div>
-              My goal is to create things that are acutally useful and efficient when dealing with security threats. 
+              My goal is to create things that are actually useful and efficient when dealing with security threats. 
             </p>
             <div className={styles.heroButtons}>
               <Link

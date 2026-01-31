@@ -41,21 +41,7 @@ const config: Config = {
       'classic',
       {
         docs: false, // Disable docs for now, we'll use custom pages
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          blogTitle: 'Blog',
-          blogDescription: 'Cybersecurity insights, technical write-ups, and professional thoughts',
-          blogSidebarTitle: 'Recent Posts',
-          blogSidebarCount: 'ALL',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false, // Disabled - using custom blog page with particles
         theme: {
           customCss: './src/css/custom.css',
         },

@@ -18,24 +18,24 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: 'Security Operations Center (SOC) Analyst II',
+    title: 'Senior Threat Hunter/Analyst',
     company: 'ExpressVPN',
     period: 'Feb 2024 - Present',
-    description: 'I hunt threats across global infrastructure and build detection systems that actually catch attackers. I created automated workflows to streamline the detection logic deployments and vulnerability management. I do security architecture reviews for engineering teams to ship secure products. When incidents happen, I investigate, contain, and eradicate the threats.',
+    description: 'Lead threat hunting operations across global infrastructure, developing and deploying advanced detection systems to identify sophisticated adversaries. Designed automated workflows for detection logic deployment and vulnerability management. Conduct security architecture reviews for engineering teams, ensuring secure product development. Manage incident response operations including investigation, containment, and threat eradication.',
     technologies: ['Threat Hunting', 'SIEM', 'Detection Engineering', 'Security Architecture', 'Vulnerability Management', 'Automation'],
   },
   {
     title: 'Cyber Security Officer',
     company: 'Sysnet System and Solutions Pte. Ltd',
     period: 'Oct 2022 - Feb 2024',
-    description: 'I deployed enterprise security solutions—SIEM platforms, vulnerability scanners, and endpoint protection—that gave companies real visibility into their threats. I ran security assessments and compliance audits that helped clients meet regulatory requirements. I managed projects end-to-end and worked directly with customers to solve their security challenges.',
+    description: 'Deployed enterprise security solutions including SIEM platforms, vulnerability scanners, and endpoint protection systems to provide comprehensive threat visibility. Conducted security assessments and compliance audits to help organizations meet regulatory requirements. Led project management initiatives and collaborated directly with clients to address complex security challenges.',
     technologies: ['SIEM', 'Vulnerability Management', 'Security Audits', 'Project Management', 'Network Hardening'],
   },
   {
     title: 'Cyber Security Engineer',
     company: 'Kernellix Co. Ltd',
     period: 'Jun 2019 - Sep 2022',
-    description: 'I built SOC platforms from scratch and architected secure cloud infrastructure across AWS, GCP, and Azure. When breaches happened, I ran forensics investigations and incident response operations to contain the damage. I automated deployments with CI/CD pipelines and orchestrated containerized applications on Kubernetes. I designed security that scaled with the business.',
+    description: 'Architected and built Security Operations Center (SOC) platforms from the ground up, designing secure cloud infrastructure across AWS, GCP, and Azure. Conducted digital forensics investigations and incident response operations during security breaches. Implemented automated deployment pipelines using CI/CD and orchestrated containerized applications on Kubernetes. Developed scalable security solutions that grew with business requirements.',
     technologies: ['Cloud Security', 'SOC Development', 'DFIR', 'Kubernetes', 'CI/CD', 'Infrastructure as Code', 'AWS', 'Azure', 'GCP'],
   },
 ];
@@ -49,6 +49,12 @@ interface Certificate {
 }
 
 const certificates: Certificate[] = [
+  {
+    name: 'GIAC Enterprise Incident Responder (GEIR)',
+    issuer: 'SANS Institute',
+    date: 'Dec 2025',
+    link: 'https://www.credly.com/badges/9f633aa8-5a02-4f00-a0aa-ff181f3c440e',
+  },
   {
     name: 'Certified Information Systems Security Professional (CISSP)',
     issuer: '(ISC)²',
@@ -108,7 +114,7 @@ function HomepageHeader() {
             </p>
             <p className={styles.heroDescription}>
               <div>I simply just do cybersecurity. I spend most of my time building security tools and hunting adversaries. From threat hunting, incident response, creating tools that can defend against security threats, and AUTOMATION, I do all the cool stuffs.</div>
-              My goal is to create things that are acutally useful and efficient when dealing with security threats. 
+              My goal is to create things that are actually useful and efficient when dealing with security threats. 
             </p>
             <div className={styles.heroButtons}>
               <Link

@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import ParticleBackground from '../components/ParticleBackground';
 
 interface Project {
   title: string;
@@ -86,8 +85,7 @@ export default function Projects(): JSX.Element {
       title="Projects"
       description="Security engineering projects and tools"
     >
-      <ParticleBackground />
-      <main style={{ padding: '2rem', position: 'relative', zIndex: 1 }}>
+      <main style={{ padding: '2rem' }}>
         <div className="container">
           <h1>Projects</h1>
           <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>

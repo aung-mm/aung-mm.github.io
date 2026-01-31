@@ -18,7 +18,7 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: 'Security Operations Center (SOC) Analyst II',
+    title: 'Senior Threat Hunter/Analyst',
     company: 'ExpressVPN',
     period: 'Feb 2024 - Present',
     description: 'I hunt threats across global infrastructure and build detection systems that actually catch attackers. I created automated workflows to streamline the detection logic deployments and vulnerability management. I do security architecture reviews for engineering teams to ship secure products. When incidents happen, I investigate, contain, and eradicate the threats.',

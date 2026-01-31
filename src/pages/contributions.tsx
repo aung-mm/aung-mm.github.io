@@ -114,13 +114,14 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
           </Link>
         )}
         {contribution.slides && (
-          <Link
+          <a
             className="button button--secondary button--sm"
-            to={contribution.slides}
+            href={contribution.slides}
+            download
             style={{ marginRight: '0.5rem', marginBottom: '0.5rem' }}
           >
             Slides
-          </Link>
+          </a>
         )}
         {contribution.video && (
           <Link

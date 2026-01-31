@@ -81,21 +81,75 @@ const contributions: Contribution[] = [
   },
 ];
 
+// Helper function to get tag styling based on type
+function getTagStyle(type: string) {
+  const baseStyle = {
+    padding: '0.4rem 1rem',
+    borderRadius: '20px',
+    fontSize: '0.75rem',
+    fontWeight: 600,
+    textTransform: 'uppercase' as const,
+    letterSpacing: '0.5px',
+    border: '1px solid',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '0.25rem',
+  };
+
+  switch (type) {
+    case 'Presentation':
+      return {
+        ...baseStyle,
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        borderColor: '#667eea',
+        color: '#ffffff',
+      };
+    case 'Talk':
+      return {
+        ...baseStyle,
+        background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        borderColor: '#f093fb',
+        color: '#ffffff',
+      };
+    case 'Workshop':
+      return {
+        ...baseStyle,
+        background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+        borderColor: '#4facfe',
+        color: '#ffffff',
+      };
+    default:
+      return {
+        ...baseStyle,
+        background: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+        borderColor: '#a8edea',
+        color: '#2d3748',
+      };
+  }
+}
+
+// Helper function to get icon for type
+function getTypeIcon(type: string) {
+  switch (type) {
+    case 'Presentation':
+      return '📊';
+    case 'Talk':
+      return '💬';
+    case 'Workshop':
+      return '🔧';
+    default:
+      return '📋';
+  }
+}
+
 function ContributionCard({ contribution }: { contribution: Contribution }) {
   return (
     <div className="card" style={{ marginBottom: '2rem', padding: '1.5rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
         <h3 style={{ margin: 0 }}>{contribution.title}</h3>
-        <span
-          style={{
-            padding: '0.25rem 0.75rem',
-            borderRadius: '4px',
-            backgroundColor: 'var(--ifm-color-primary-lightest)',
-            color: 'var(--ifm-color-primary-darkest)',
-            fontSize: '0.875rem',
-            fontWeight: 500,
-          }}
-        >
+        <span style={getTagStyle(contribution.type)}>
+          <span>{getTypeIcon(contribution.type)}</span>
           {contribution.type}
         </span>
       </div>

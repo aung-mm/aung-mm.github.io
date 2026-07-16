@@ -86,6 +86,20 @@
   font-size: 0.9rem;
 }
 
+/* Keep the full horizontal navbar down to 768px. Docusaurus normally collapses
+   to a hamburger below 996px, but mobile "Request desktop site" uses a ~980px
+   layout viewport — this makes that mode show the real desktop nav instead of
+   the hamburger. Actual phones (<768px) still get the mobile menu. */
+@media (min-width: 768px) and (max-width: 996px) {
+  .navbar__toggle {
+    display: none !important;
+  }
+  .navbar__item {
+    display: inline-flex !important;
+    align-items: center;
+  }
+}
+
 .navbar__link:hover,
 .navbar__link--active {
   color: var(--ifm-color-primary);

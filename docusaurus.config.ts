@@ -90,8 +90,8 @@ const config: Config = {
           title: 'Navigate',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Home',
+              to: '/',
             },
             {
               label: 'Talks',
@@ -102,12 +102,8 @@ const config: Config = {
               to: '/projects',
             },
             {
-              label: 'Contributions',
-              to: '/contributions',
-            },
-            {
-              label: 'Hobbies',
-              to: '/hobbies',
+              label: 'Blog',
+              to: '/blog',
             },
           ],
         },

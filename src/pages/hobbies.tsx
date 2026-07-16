@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import ParticleBackground from '../components/ParticleBackground';
 
 interface HobbyItem {
   title: string;
@@ -58,13 +57,11 @@ function HobbyCard({ item }: { item: HobbyItem }) {
   );
 }
 
-export default function Hobbies(): JSX.Element {
+export default function Hobbies(): React.JSX.Element {
   return (
     <Layout
-      title="Hobbies"
       description="Personal interests, vlogs, notes, and articles"
     >
-      <ParticleBackground />
       <main style={{ padding: '2rem', position: 'relative', zIndex: 1 }}>
         <div className="container">
           <h1>Hobbies & Interests</h1>

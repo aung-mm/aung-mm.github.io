@@ -2,12 +2,13 @@ import { useCallback, useEffect, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import type { Container, Engine } from '@tsparticles/engine';
-import { useColorMode } from '@docusaurus/theme-common';
+
+// Teal-tinted version of the original particle background, transparent so the
+// security-ops canvas (#0b0d10) shows through.
+const ACCENT = '#3ad0c2';
 
 export default function ParticleBackground() {
   const [init, setInit] = useState(false);
-  const { colorMode } = useColorMode();
-  const isDarkTheme = colorMode === 'dark';
 
   useEffect(() => {
     initParticlesEngine(async (engine: Engine) => {
@@ -17,20 +18,11 @@ export default function ParticleBackground() {
     });
   }, []);
 
-  const particlesLoaded = useCallback(async (container?: Container) => {
-    console.log('Particles loaded', container);
-  }, []);
+  const particlesLoaded = useCallback(async (_container?: Container) => {}, []);
 
   if (!init) {
     return null;
   }
-
-  // Theme-specific colors
-  const backgroundColor = isDarkTheme ? '#000000' : '#ffffff';
-  const particleColor = isDarkTheme ? '#60a5fa' : '#2563eb';
-  const linkColor = isDarkTheme ? '#60a5fa' : '#2563eb';
-  const linkOpacity = isDarkTheme ? 0.3 : 0.2;
-  const particleOpacity = isDarkTheme ? 0.5 : 0.4;
 
   return (
     <Particles
@@ -38,73 +30,44 @@ export default function ParticleBackground() {
       particlesLoaded={particlesLoaded}
       options={{
         background: {
-          color: {
-            value: backgroundColor,
-          },
+          color: { value: 'transparent' },
         },
         fpsLimit: 120,
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: 'push',
-            },
-            onHover: {
-              enable: true,
-              mode: 'repulse',
-            },
-            resize: {
-              enable: true,
-            } as any,
+            onClick: { enable: true, mode: 'push' },
+            onHover: { enable: true, mode: 'repulse' },
+            resize: { enable: true } as any,
           },
           modes: {
-            push: {
-              quantity: 4,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-            },
+            push: { quantity: 4 },
+            repulse: { distance: 200, duration: 0.4 },
           },
         },
         particles: {
-          color: {
-            value: particleColor,
-          },
+          color: { value: ACCENT },
           links: {
-            color: linkColor,
+            color: ACCENT,
             distance: 150,
             enable: true,
-            opacity: linkOpacity,
+            opacity: 0.3,
             width: 1,
           },
           move: {
             direction: 'none',
             enable: true,
-            outModes: {
-              default: 'bounce',
-            },
+            outModes: { default: 'bounce' },
             random: false,
             speed: 1,
             straight: false,
           },
           number: {
-            density: {
-              enable: true,
-              width: 1920,
-              height: 1080,
-            } as any,
-            value: 80,
+            density: { enable: true, width: 1920, height: 1080 } as any,
+            value: 45,
           },
-          opacity: {
-            value: particleOpacity,
-          },
-          shape: {
-            type: 'circle',
-          },
-          size: {
-            value: { min: 1, max: 3 },
-          },
+          opacity: { value: 0.5 },
+          shape: { type: 'circle' },
+          size: { value: { min: 1, max: 3 } },
         },
         detectRetina: true,
       }}
@@ -114,7 +77,7 @@ export default function ParticleBackground() {
         left: 0,
         width: '100%',
         height: '100%',
-        zIndex: 0,
+        zIndex: -1,
       }}
     />
   );

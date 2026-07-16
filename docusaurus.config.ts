@@ -5,9 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Aung Myint Myat',
+  title: 'aungmm.dev',
   tagline: 'Cybersecurity Professional | Security Engineering | Defense Operations',
-  favicon: 'img/detective.svg',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://aungmmtech.info',
+  url: 'https://aungmm.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -53,22 +53,24 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
+      // Site is dark-only; the design does not support a light theme, so the
+      // toggle is disabled and dark is forced.
       defaultMode: 'dark',
-      disableSwitch: false,
+      disableSwitch: true,
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Aung Myint Myat',
       logo: {
-        alt: 'Aung Myint Myat Logo',
-        src: 'img/detective.svg',
+        alt: 'aungmm.dev',
+        src: 'img/logo-wordmark.svg',
+        href: '/',
       },
       hideOnScroll: false,
       items: [
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/', label: 'Home', position: 'left', activeBaseRegex: '^/$'},
+        {to: '/talks', label: 'Talks', position: 'left'},
         {to: '/projects', label: 'Projects', position: 'left'},
-        {to: '/contributions', label: 'Contributions', position: 'left'},
-        {to: '/hobbies', label: 'Hobbies', position: 'left'},
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://linkedin.com/in/aungmm',
           label: 'LinkedIn',
@@ -92,12 +94,20 @@ const config: Config = {
               to: '/blog',
             },
             {
+              label: 'Talks',
+              to: '/talks',
+            },
+            {
               label: 'Projects',
               to: '/projects',
             },
             {
               label: 'Contributions',
               to: '/contributions',
+            },
+            {
+              label: 'Hobbies',
+              to: '/hobbies',
             },
           ],
         },

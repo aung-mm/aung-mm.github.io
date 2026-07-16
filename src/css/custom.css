@@ -1,98 +1,84 @@
 /**
- * Modern minimalist theme inspired by clean tech portfolios
- * Focus on readability, spacing, and subtle interactions
+ * Security-ops theme, aligned with the redesigned homepage.
+ * IBM Plex Sans/Mono, dark #0b0d10 canvas, single teal accent.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
-/* Light theme - Clean and minimal */
+/* Shared tokens + teal accent palette. The site is dark-only (the theme toggle
+   is disabled in docusaurus.config.ts), so there is no light-mode palette. */
 :root {
-  /* Modern blue accent - subtle and professional */
-  --ifm-color-primary: #2563eb;
-  --ifm-color-primary-dark: #1d4ed8;
-  --ifm-color-primary-darker: #1e40af;
-  --ifm-color-primary-darkest: #1e3a8a;
-  --ifm-color-primary-light: #3b82f6;
-  --ifm-color-primary-lighter: #60a5fa;
-  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-color-primary: #3ad0c2;
+  --ifm-color-primary-dark: #2bbfb1;
+  --ifm-color-primary-darker: #26b4a7;
+  --ifm-color-primary-darkest: #1f9489;
+  --ifm-color-primary-light: #52d7cb;
+  --ifm-color-primary-lighter: #63dbd0;
+  --ifm-color-primary-lightest: #8ce6de;
 
-  /* Modern typography - Inter for UI, Roboto for content */
-  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-  --ifm-heading-font-family: 'Inter', sans-serif;
+  --ifm-font-family-base: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-font-family-monospace: 'IBM Plex Mono', 'Fira Code', monospace;
+  --ifm-heading-font-family: 'IBM Plex Sans', sans-serif;
 
-  /* Refined spacing and sizing */
   --ifm-code-font-size: 90%;
   --ifm-global-radius: 8px;
   --ifm-line-height-base: 1.7;
   --ifm-heading-line-height: 1.3;
 
-  /* Clean background colors */
-  --ifm-background-color: #ffffff;
-  --ifm-background-surface-color: #f8fafc;
-  --ifm-navbar-background-color: rgba(255, 255, 255, 0.95);
-  --ifm-footer-background-color: #f8fafc;
-
-  /* Subtle text colors */
-  --ifm-font-color-base: #1e293b;
-  --ifm-color-emphasis-300: #cbd5e1;
-  --ifm-color-emphasis-600: #64748b;
-  --ifm-color-emphasis-700: #475569;
-  --ifm-color-emphasis-800: #334155;
-
-  /* Refined shadows */
-  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --ifm-global-shadow-tl: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
-  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(58, 208, 194, 0.15);
 }
 
-/* Dark mode - Pure black background */
+/* Security-ops canvas. Kept under [data-theme='dark'] so these override
+   Infima's built-in dark defaults (which win over :root on specificity). */
 [data-theme='dark'] {
-  --ifm-color-primary: #60a5fa;
-  --ifm-color-primary-dark: #3b82f6;
-  --ifm-color-primary-darker: #2563eb;
-  --ifm-color-primary-darkest: #1d4ed8;
-  --ifm-color-primary-light: #93c5fd;
-  --ifm-color-primary-lighter: #bfdbfe;
-  --ifm-color-primary-lightest: #dbeafe;
+  --ifm-background-color: #0b0d10;
+  --ifm-background-surface-color: #131619;
+  --ifm-navbar-background-color: rgba(11, 13, 16, 0);
+  --ifm-footer-background-color: #0b0d10;
 
-  --ifm-background-color: #000000;
-  --ifm-background-surface-color: #0a0a0a;
-  --ifm-navbar-background-color: rgba(0, 0, 0, 0.95);
-  --ifm-footer-background-color: #0a0a0a;
-
-  --ifm-font-color-base: #e2e8f0;
-  --ifm-color-emphasis-300: #333333;
-  --ifm-color-emphasis-600: #94a3b8;
-  --ifm-color-emphasis-700: #cbd5e1;
-  --ifm-color-emphasis-800: #e2e8f0;
-
-  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.15);
+  --ifm-font-color-base: #e6e8eb;
+  --ifm-color-emphasis-300: rgba(255, 255, 255, 0.12);
+  --ifm-color-emphasis-600: #9aa0a8;
+  --ifm-color-emphasis-700: #c3c8cf;
+  --ifm-color-emphasis-800: #f4f6f8;
 }
 
-/* Modern card styling with subtle elevation */
+/* Cards */
 .card {
   background: var(--ifm-background-surface-color);
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 12px;
-  box-shadow: var(--ifm-global-shadow-lw);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
 
 .card:hover {
   border-color: var(--ifm-color-primary);
-  box-shadow: var(--ifm-global-shadow-md);
   transform: translateY(-2px);
 }
 
-/* Clean navbar with backdrop blur */
+/* Navbar - glass over the dark canvas */
 .navbar {
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  backdrop-filter: none;
+  border-bottom: none;
   box-shadow: none;
+}
+
+.navbar__title,
+.navbar__brand {
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* aungmm.dev wordmark logo */
+.navbar__logo {
+  height: 2.25rem;
+}
+
+.navbar__logo img {
+  height: 100%;
+  width: auto;
 }
 
 .navbar__item {
@@ -100,11 +86,16 @@
   font-size: 0.9rem;
 }
 
-/* Minimal button styling */
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Buttons */
 .button {
-  border-radius: 6px;
+  border-radius: 8px;
   font-family: var(--ifm-font-family-base);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.01em;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
@@ -112,50 +103,32 @@
 
 .button:hover {
   transform: translateY(-1px);
-  box-shadow: var(--ifm-global-shadow-md);
 }
 
 .button--primary {
   background: var(--ifm-color-primary);
+  color: #06120f;
 }
 
 .button--outline {
   border: 1.5px solid var(--ifm-color-primary);
 }
 
-/* Typography refinements */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--ifm-heading-font-family);
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
+h1 { font-size: 2.5rem; font-weight: 700; }
+h2 { font-size: 2rem; margin-top: 2rem; }
+h3 { font-size: 1.5rem; margin-top: 1.5rem; }
 
-h2 {
-  font-size: 2rem;
-  margin-top: 2rem;
-}
+a { text-decoration: none; transition: color 0.2s ease; }
+a:hover { text-decoration: none; }
 
-h3 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-/* Better link styling */
-a {
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* Footer styling */
+/* Footer */
 .footer {
   background: var(--ifm-footer-background-color);
   border-top: 1px solid var(--ifm-color-emphasis-300);
@@ -170,17 +143,10 @@ a:hover {
   color: var(--ifm-color-emphasis-800);
 }
 
-/* Container max width for better readability */
-.container {
-  max-width: 1200px;
-}
+.container { max-width: 1200px; }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-/* Code blocks */
 code {
   border-radius: 4px;
   padding: 0.15rem 0.3rem;
@@ -188,7 +154,6 @@ code {
   border: 1px solid var(--ifm-color-emphasis-300);
 }
 
-/* Ensure main content is visible */
 main {
   position: relative;
   z-index: 1;

@@ -127,13 +127,14 @@ interface Certificate {
   name: string;
   issuer: string;
   date: string;
+  verify?: string;
 }
 
 const certificates: Certificate[] = [
-  {name: 'GIAC Enterprise Incident Responder (GEIR)', issuer: 'SANS Institute', date: 'Dec 2025'},
-  {name: 'Certified Information Systems Security Professional (CISSP)', issuer: '(ISC)\u00b2', date: 'May 2022'},
-  {name: 'Certified Threat Hunting Professional (eCTHPv2)', issuer: 'INE', date: 'May 2025'},
-  {name: 'HashiCorp Certified: Terraform Associate', issuer: 'HashiCorp', date: 'Apr 2023'},
+  {name: 'GIAC Enterprise Incident Responder (GEIR)', issuer: 'SANS Institute', date: 'Dec 2025', verify: 'https://www.credly.com/badges/9f633aa8-5a02-4f00-a0aa-ff181f3c440e'},
+  {name: 'Certified Information Systems Security Professional (CISSP)', issuer: '(ISC)\u00b2', date: 'May 2022', verify: 'https://www.credly.com/badges/3db8669b-721f-4739-9590-f1c9e115e9f0/public_url'},
+  {name: 'Certified Threat Hunting Professional (eCTHPv2)', issuer: 'INE', date: 'May 2025', verify: 'https://certs.ine.com/bddb4735-f6fe-4b6d-ba6a-a299b6c0fc55#acc.V7dYgZ2z'},
+  {name: 'HashiCorp Certified: Terraform Associate', issuer: 'HashiCorp', date: 'Apr 2023', verify: 'https://www.credly.com/badges/bfa2a0a5-a609-474a-b52a-471148d4fb39/public_url'},
   {name: 'Foundation Level Threat Intelligence Analyst', issuer: 'arcX', date: 'Mar 2023'},
   {name: 'AWS Certified Security Specialty', issuer: 'AWS', date: 'Dec 2021'},
   {name: 'AWS Certified Solutions Architect Associate', issuer: 'AWS', date: 'Sep 2019'},
@@ -266,15 +267,26 @@ function CertsSection() {
     <section id="certs" style={sectionWrap}>
       <SectionHead title="Certifications" />
       <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16}}>
-        {certificates.map((cert) => (
-          <div key={cert.name} style={{...card, display: 'flex', flexDirection: 'column', padding: 22, borderRadius: 13}}>
-            <div style={{marginBottom: 14}}>
-              <span style={{fontFamily: mono, fontSize: 11.5, color: ACCENT, letterSpacing: '0.04em'}}>{cert.date}</span>
-            </div>
-            <h3 style={{margin: '0 0 8px', fontSize: 15.5, fontWeight: 600, color: '#f4f6f8', lineHeight: 1.35, flex: 1}}>{cert.name}</h3>
-            <div style={{fontSize: 13.5, color: '#9aa0a8'}}>{cert.issuer}</div>
-          </div>
-        ))}
+        {certificates.map((cert) => {
+          const cardStyle: CSSProperties = {...card, display: 'flex', flexDirection: 'column', padding: 22, borderRadius: 13, color: 'inherit'};
+          const body = (
+            <>
+              <div style={{marginBottom: 14}}>
+                <span style={{fontFamily: mono, fontSize: 11.5, color: ACCENT, letterSpacing: '0.04em'}}>{cert.date}</span>
+              </div>
+              <h3 style={{margin: '0 0 8px', fontSize: 15.5, fontWeight: 600, color: '#f4f6f8', lineHeight: 1.35, flex: 1}}>{cert.name}</h3>
+              <div style={{fontSize: 13.5, color: '#9aa0a8'}}>{cert.issuer}</div>
+            </>
+          );
+          return cert.verify ? (
+            <a key={cert.name} href={cert.verify} target="_blank" rel="noopener noreferrer" style={cardStyle}>
+              {body}
+              <div style={{marginTop: 14, fontFamily: mono, fontSize: 12, color: ACCENT}}>Verify credential &#8599;</div>
+            </a>
+          ) : (
+            <div key={cert.name} style={cardStyle}>{body}</div>
+          );
+        })}
       </div>
     </section>
   );
